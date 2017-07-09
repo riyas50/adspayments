@@ -24,7 +24,7 @@
  <div class="form-group">
  <div class="col-lg-4"></div>
  <div class="col-lg-4 text-right">
-          <a class="glyphicon glyphicon-home" style="font-size:30px;color:orange" href="/chromisphp/"></a> 
+          <a class="glyphicon glyphicon-home" style="font-size:30px;color:orange" href="/adspayments/"></a> 
  <div class="input-group">
     <div class="input-group-addon">Template</div>
     <input type="text" class="form-control" name="category" id="inlineFormInputGroup" placeholder="Template" required>
@@ -64,6 +64,10 @@ if (isset($_POST['Remove']))
     putScripts();
     stickfooter();
 ?>
-<!--
--->  </body>
+
+<!--put page scripts below-->
+
+<!--put page scripts above-->
+
+</body>
 </html>

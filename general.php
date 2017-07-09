@@ -9,13 +9,15 @@ function putLinks()
     <!-- Bootstrap -->
     <link href='css/bootstrap.min.css' rel='stylesheet'>
     
+    <!-- Bootstrap datetimepicker -->
+    <link href='css/bootstrap-datetimepicker.min.css' rel='stylesheet'>  
+    
     <!--Sticky-footer-->
     <link href='css/sticky-footer.css' rel='stylesheet'>
 
     <!-- Animate.css -->
     <link href='css/animate.css' rel='stylesheet'>
     
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -38,6 +40,46 @@ function putScripts()
         <script src='js/jquery.min.js'></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src='js/bootstrap.min.js'></script>
-        <script src='js/validator.js'></script>";
+        <script src='js/validator.js'></script>
+        <script src='js/moment.min.js'></script>
+        <script src='js/bootstrap-datetimepicker.min.js'></script>";
+    }
+
+function putDatePickerScript()
+    {
+        echo "
+        <Script>
+        $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1
+    });
+	$('.form_date').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+    });
+	$('.form_time').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 1,
+		minView: 0,
+		maxView: 1,
+		forceParse: 0
+    });
+    </Script>";
     }
 ?>

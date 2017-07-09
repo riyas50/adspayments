@@ -5,7 +5,7 @@
         include('general.php');
         putLinks();
     ?>
-    <title>Home</title>
+    <title>HOME - ADS IT CUSTOMER PAYMENT TRACKER</title>
   </head>
   <body>
 
@@ -27,7 +27,7 @@
       </div>
       <div class="panel-body">
    <a class="btn btn-info" href="/adspayments/customers.php">Customers</a>
-  <a class="btn btn-warning" href="#"></a>
+  <a class="btn btn-warning" href="/adspayments/customerpayment.php">Payments</a>
   <a class="btn btn-danger" href="#"></a>
   <a class="btn btn-success" href="#"></a>
   </div>

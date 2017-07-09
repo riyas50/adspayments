@@ -5,13 +5,13 @@
         include('general.php');
         putLinks();
     ?>
-   <title>Chromis PHP - customers</title>
+   <title>CUSTOMERS - ADS IT CUSTOMER PAYMENT TRACKER</title>
   </head>
 <body>
 <header class="site__header island">
   <div class="wrap">
    <span id="animationSandbox" style="display: block;"  class="tada animated">
-   <h1 class="site__title mega text-center">Customers</h1>
+   <h1 class="site__title mega text-center">CUSTOMERS</h1>
    </span>
   </div>
   </header>
@@ -47,6 +47,19 @@
             <?php
             
             include('customersquery.php');
+
+            session_start();
+            if( strcasecmp($_SERVER['REQUEST_METHOD'],"POST") === 0) {
+                $_SESSION['postdata'] = $_POST;
+                header("Location: ".$_SERVER['PHP_SELF']."?".$_SERVER['QUERY_STRING']);
+                exit;
+            }
+            if( isset($_SESSION['postdata'])) {
+                $_POST = $_SESSION['postdata'];
+                unset($_SESSION['postdata']);
+            }            
+            
+
             if (!isset($_POST))
             {
                 refreshRecords();
